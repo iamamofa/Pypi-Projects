@@ -15,3 +15,8 @@ def pdf_extract(file, i):
       temp = pytesseract.image_to_string(Image.open(PATH + file))
       f.write(temp)
   f.close()
+
+  
+  for i in range(len(pdf_files)):
+  pdf_file = pdf_files[i]
+  pdf_extract(pdf_file, i)
